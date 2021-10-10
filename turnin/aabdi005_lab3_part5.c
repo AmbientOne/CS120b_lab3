@@ -29,9 +29,11 @@ int main(void) {
         tmpD = PIND;
         
 	totalWeight = (tmpD << 1) + (tmpB & 0x01);
-	PORTB = 0x0;
+	
         if( totalWeight >= 70) PORTB = 0x02;
-	if( totalWeight > 5 && totalWeight < 70) PORTB = 0x04;       
+	else if( totalWeight > 5 && totalWeight < 70) PORTB = 0x04;
+        else PORTB = 0x00;
+        
 }
     return 1;
 }
