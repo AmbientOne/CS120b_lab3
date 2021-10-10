@@ -23,8 +23,8 @@ int main(void) {
     /* Insert your solution below */
     while(1) {
 	tmpA = PINA;
-        //PORTB = tmpA >> 4;
-        PORTC = (tmpA >> 4) | (tmpA << 4);   
+        PORTB = tmpA >> 4;
+        PORTC = tmpA << 4;   
     }
     return 1;
 }
